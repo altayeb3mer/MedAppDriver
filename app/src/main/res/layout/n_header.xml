@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="75dp"
             android:orientation="horizontal"
-            android:background="@color/colorPrimaryLight">
+            android:background="@color/colorPrimaryDark">
             <LinearLayout
                 android:layout_marginLeft="@dimen/margin_normal_size"
                 android:layout_marginRight="@dimen/margin_normal_size"
@@ -53,11 +53,11 @@
                     android:textColor="@android:color/white"
                     />
                 <TextView
-                    android:textSize="@dimen/txt_normal_size14"
+                    android:textSize="20sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="300 ج س"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="#808080"
                     />
             </LinearLayout>
             <LinearLayout
@@ -75,11 +75,11 @@
                     android:textColor="@android:color/white"
                     />
                 <TextView
-                    android:textSize="@dimen/txt_normal_size14"
+                    android:textSize="20sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="7 رحلات"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/color80"
                     />
             </LinearLayout>
 

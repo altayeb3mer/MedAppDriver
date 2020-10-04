@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -58,6 +59,12 @@ public class AdapterRequestDet extends RecyclerView.Adapter<AdapterRequestDet.Vi
 
             }
         });
+        holder.layDeliev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog();
+            }
+        });
 
 
     }
@@ -80,7 +87,7 @@ public class AdapterRequestDet extends RecyclerView.Adapter<AdapterRequestDet.Vi
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        LinearLayout container;
+        LinearLayout container,layDeliev;
         AppCompatButton buttonSubscription;
         TextView textView_title,textView_type,textView_release_type,textView_release_time;
         ImageView imageView;
@@ -94,6 +101,7 @@ public class AdapterRequestDet extends RecyclerView.Adapter<AdapterRequestDet.Vi
             container = itemView.findViewById(R.id.container);
 //            buttonSubscription = itemView.findViewById(R.id.btn_sub);
             textView_title = itemView.findViewById(R.id.txtPharmachy);
+            layDeliev = itemView.findViewById(R.id.layDeliev);
 
 //            textView_type = itemView.findViewById(R.id.news_item_type);
 //            textView_release_type = itemView.findViewById(R.id.news_item_release_type);
@@ -108,6 +116,22 @@ public class AdapterRequestDet extends RecyclerView.Adapter<AdapterRequestDet.Vi
         }
     }
 
+    private void showDialog(){
+        LayoutInflater factory = LayoutInflater.from(activity);
+        final View deleteDialogView = factory.inflate(R.layout.dialog_deliev, null);
+        final AlertDialog deleteDialog = new AlertDialog.Builder(activity).create();
+        deleteDialog.setView(deleteDialogView);
+        deleteDialogView.findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //your business logic
+                deleteDialog.dismiss();
+            }
+        });
+
+
+        deleteDialog.show();
+    }
 
 }
 

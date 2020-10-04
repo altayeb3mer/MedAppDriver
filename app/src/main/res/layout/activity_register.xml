@@ -9,7 +9,7 @@
     android:layoutDirection="rtl">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/public_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         app:navigationIcon="@drawable/ic_arrow_back"
@@ -20,7 +20,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar">
+        android:layout_below="@+id/public_toolbar">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -130,9 +130,9 @@
                         android:gravity="center">
 
                         <TextView
+                            android:layout_marginTop="@dimen/margin_small_size"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="50dp"
                             android:gravity="center"
                             android:text="Or Login with"
                             android:textColor="@android:color/white"

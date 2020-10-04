@@ -5,12 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.medappdriver.R;
+import com.example.medappdriver.Utils.ToolbarClass;
 
-public class Login extends AppCompatActivity {
+public class Login extends ToolbarClass {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+
+    protected final void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        super.onCreate(R.layout.activity_login, "تسجيل الدخول");
     }
 }

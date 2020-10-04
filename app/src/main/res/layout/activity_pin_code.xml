@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         app:navigationIcon="@drawable/ic_arrow_back"
-        app:title="Login"
+        app:title="Verify your nomber"
         app:titleTextColor="@android:color/white"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
@@ -29,36 +29,60 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.2">
-                <ImageView
-                    android:layout_width="62dp"
-                    android:layout_height="62dp"
-                    android:src="@drawable/ic_user"
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"/>
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_marginTop="@dimen/margin_small_size"
+                        android:id="@+id/ic_person"
+                        android:layout_width="62dp"
+                        android:layout_height="62dp"
+                        android:src="@drawable/ic_user"
+                        android:layout_centerHorizontal="true"/>
+                    <TextView
+                        android:layout_marginTop="@dimen/margin_small_size"
+                        android:layout_below="@+id/ic_person"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Enter 4 digit code bellow\n to verify your login"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"/>
+                </LinearLayout>
+
+
             </RelativeLayout>
             <RelativeLayout
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="0.65">
+                android:layout_weight="0.50">
                 <LinearLayout
                     android:layout_marginTop="40dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:gravity="center_horizontal">
-                    <EditText
-                        android:paddingRight="5dp"
-                        android:paddingLeft="5dp"
-                        android:background="@drawable/edt_bg"
-                        android:layout_width="260dp"
-                        android:layout_height="45dp"
-                        android:hint="phone"
-                        android:layout_marginTop="10dp"
-                        android:drawableLeft="@drawable/ic_phone"
-                        android:drawablePadding="10dp"
-                        android:drawableStart="@drawable/ic_phone"
-                        android:inputType="phone"/>
+                    <com.goodiebag.pinview.Pinview
+                        android:gravity="center"
+                        android:layoutDirection="ltr"
+                        app:textSize="@dimen/txt_normal_size"
+                        android:id="@+id/pinview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:pinWidth="40dp"
+                        app:pinHeight="40dp"
+                        app:pinLength="4"
+                        app:cursorVisible="true"
+                        app:forceKeyboard="false"
+                        app:inputType="number"
+                        app:password="false"
+                        app:pinBackground="@drawable/pin_bg"
+                        />
                     <RelativeLayout
                         android:layoutDirection="rtl"
                         android:layout_marginTop="20dp"
@@ -78,7 +102,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="Login"
+                            android:text="Verify"
                             android:textColor="@android:color/white"
                             android:textSize="16sp"/>
 
@@ -91,52 +115,30 @@
                     android:layout_alignParentBottom="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:gravity="center">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="50dp"
-                        android:gravity="center"
-                        android:text="Or Login with"
-                        android:textColor="@android:color/white"
-                        android:textSize="20sp"/>
-                    <LinearLayout
-                        android:layout_marginTop="20dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginLeft="10dp"
-                            android:src="@drawable/ic_google"
-                            />
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginLeft="10dp"
-                            android:src="@drawable/ic_facebook"
-                            />
-                    </LinearLayout>
+                        android:gravity="center"
+                        android:text="If not receive press"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/txt_large_size"
+                        android:layout_margin="@dimen/margin_small_size"/>
+                    <TextView
+                        android:layout_margin="@dimen/margin_small_size"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Resend"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/txt_large_size"/>
                 </LinearLayout>
 
             </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.15">
-                <ImageView
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_sign_up"
-                    android:layout_margin="10dp"/>
-            </RelativeLayout>
+
         </LinearLayout>
 
 

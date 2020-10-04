@@ -23,5 +23,32 @@
                 android:title="الضبط"
                 />
         </group>
+        <group android:checkableBehavior="none"
+            android:id="@+id/fourth_menu_group">
+            <item
+                android:id="@+id/nav_menu_sc1"
+                android:title="شاشة تسجيل الدخول"
+                />
+            <item
+                android:id="@+id/nav_menu_sc2"
+                android:title="شاشة تسجيل جديد"
+                />
+            <item
+                android:id="@+id/nav_menu_sc3"
+                android:title="شاشة كود التاكيد"
+                />
+            <item
+                android:id="@+id/nav_menu_sc4"
+                android:title="شاشة طلب جديد"
+                />
+            <item
+                android:id="@+id/nav_menu_sc5"
+                android:title="شاشة تفاصيل طلب جديد"
+                />
+            <item
+                android:id="@+id/nav_menu_sc6"
+                android:title="شاشة عرض الخرائط"
+                />
+        </group>
     </group>
 </menu>

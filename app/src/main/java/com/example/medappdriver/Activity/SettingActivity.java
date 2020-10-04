@@ -6,11 +6,13 @@ import android.os.Bundle;
 
 import com.example.medappdriver.R;
 import com.example.medappdriver.Utils.ToolbarClass;
+import com.google.android.gms.maps.SupportMapFragment;
 
-public class Register extends ToolbarClass {
+public class SettingActivity extends ToolbarClass {
+
 
     protected final void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.onCreate(R.layout.activity_register, "تسجيل جديد");
+        super.onCreate(R.layout.activity_setting, "الضبط");
     }
 }
