@@ -34,9 +34,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="طلب جديد.."
+                android:text="تفاصيل الطلب.."
                 android:textColor="@color/colorPrimary"
-                android:textSize="20sp"/>
+                android:textSize="@dimen/txt_small_size"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,8 +44,8 @@
             android:layout_weight=".7">
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="30dp">
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal_size">
                 <ScrollView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -61,17 +61,19 @@
                             <TableRow
                                 android:weightSum="1">
                                 <TextView
+                                    android:textStyle="bold"
                                     android:layout_width="0dp"
                                     android:layout_weight="0.5"
                                     android:text="موقع التسليم"
                                     android:textSize="@dimen/txt_normal_size"
                                     android:gravity="center"/>
                                 <TextView
+                                    android:textStyle="bold"
                                     android:layout_width="0dp"
                                     android:layout_weight="0.5"
                                     android:text="بحري"
                                     android:textSize="@dimen/txt_normal_size"
-                                    android:gravity="center"
+                                    android:gravity="center_vertical"
                                     android:textColor="@color/colorPrimary"/>
                             </TableRow>
                         </TableLayout>
@@ -86,6 +88,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
                             <TableRow
+                                android:gravity="center_vertical"
+                                android:background="@drawable/rec_new_item_bg"
+                                android:layout_marginLeft="@dimen/margin_normal_size"
+                                android:layout_marginRight="@dimen/margin_normal_size"
                                 android:weightSum="1">
                                 <TextView
                                     android:layout_width="0dp"
@@ -103,7 +109,7 @@
                                     android:layout_weight="0.45"
                                     android:text="بحري"
                                     android:textSize="@dimen/txt_normal_size"
-                                    android:gravity="center"
+                                    android:gravity="center_vertical"
                                     android:textColor="@color/colorPrimary"/>
                             </TableRow>
                         </TableLayout>
@@ -112,6 +118,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
                             <TableRow
+                                android:gravity="center_vertical"
+                                android:background="@drawable/rec_new_item_bg"
+                                android:layout_marginLeft="@dimen/margin_normal_size"
+                                android:layout_marginRight="@dimen/margin_normal_size"
                                 android:weightSum="1">
                                 <TextView
                                     android:layout_width="0dp"
@@ -129,15 +139,20 @@
                                     android:layout_weight="0.45"
                                     android:text="الخرطوم الصحافة"
                                     android:textSize="@dimen/txt_normal_size"
-                                    android:gravity="center"
+                                    android:gravity="center_vertical"
                                     android:textColor="@color/colorPrimary"/>
                             </TableRow>
                         </TableLayout>
+
                         <TableLayout
                             android:layout_marginTop="@dimen/txt_normal_size"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
                             <TableRow
+                                android:gravity="center_vertical"
+                                android:background="@drawable/rec_new_item_bg"
+                                android:layout_marginLeft="@dimen/margin_normal_size"
+                                android:layout_marginRight="@dimen/margin_normal_size"
                                 android:weightSum="1">
                                 <TextView
                                     android:layout_width="0dp"
@@ -155,7 +170,7 @@
                                     android:layout_weight="0.45"
                                     android:text="الخرطوم اركويت"
                                     android:textSize="@dimen/txt_normal_size"
-                                    android:gravity="center"
+                                    android:gravity="center_vertical"
                                     android:textColor="@color/colorPrimary"/>
                             </TableRow>
                         </TableLayout>
@@ -174,6 +189,7 @@
                             android:layout_width="20dp"
                             android:layout_height="20dp"/>
                         <TableLayout
+                            android:layout_marginBottom="@dimen/margin_large_size"
                             android:layout_marginTop="@dimen/txt_normal_size"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
@@ -234,7 +250,7 @@
                 android:layoutDirection="rtl"
                 android:layout_width="130dp"
                 android:layout_height="45dp"
-                android:background="@drawable/btn_bg">
+                android:background="@drawable/btn_bg_green">
                 <ImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"
@@ -259,14 +275,14 @@
                 android:layoutDirection="rtl"
                 android:layout_width="130dp"
                 android:layout_height="45dp"
-                android:background="@drawable/btn_bg">
+                android:background="@drawable/btn_bg_mute">
                 <ImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"
-                    android:src="@drawable/ic_close"
+                    android:src="@drawable/ic_mute"
                     android:id="@+id/ic_go2"
                     />
                 <TextView

@@ -30,6 +30,8 @@
             android:textSize="@dimen/txt_normal_size"
             android:text="ادخل كود التسليم"/>
         <EditText
+            android:paddingLeft="@dimen/margin_small_size"
+            android:paddingRight="@dimen/margin_small_size"
             android:layout_marginTop="@dimen/margin_small_size"
             android:background="@drawable/shape_rectangle_rounded_border"
             android:layout_width="270dp"

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Activity.MainActivity"
     android:background="@drawable/bg_login"
-    android:layoutDirection="rtl">
+    android:layoutDirection="ltr">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/public_toolbar"
