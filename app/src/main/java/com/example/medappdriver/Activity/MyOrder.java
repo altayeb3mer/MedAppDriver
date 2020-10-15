@@ -5,35 +5,38 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.example.medappdriver.Adapter.AdapterMyOrder;
 import com.example.medappdriver.Adapter.AdapterRequestDet;
+import com.example.medappdriver.Model.ModelMyOrder;
 import com.example.medappdriver.Model.ModelRequest;
 import com.example.medappdriver.R;
 import com.example.medappdriver.Utils.ToolbarClass;
 
 import java.util.ArrayList;
 
-public class NewRequestDetails extends ToolbarClass {
+public class MyOrder extends ToolbarClass {
 
-    RecyclerView recyclerView;
-    AdapterRequestDet adapterRequestDet;
-    ArrayList<ModelRequest> arrayList;
+    RecyclerView recycler;
+    ArrayList<ModelMyOrder> arrayList;
+    AdapterMyOrder adapterMyOrder;
+
 
     protected final void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.onCreate(R.layout.activity_new_request_details, "تفاصيل الطلب");
-        init();
+        super.onCreate(R.layout.activity_my_order, "طلباتي");
 
+        init();
     }
 
     private void init() {
-        recyclerView = findViewById(R.id.recycler);
+        recycler = findViewById(R.id.recycler);
         arrayList = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            ModelRequest item = new ModelRequest();
+            ModelMyOrder item = new ModelMyOrder();
             item.setId(i+"");
             arrayList.add(item);
         }
-        adapterRequestDet = new AdapterRequestDet(this,arrayList);
-        recyclerView.setAdapter(adapterRequestDet);
+        adapterMyOrder = new AdapterMyOrder(this,arrayList);
+        recycler.setAdapter(adapterMyOrder);
     }
 }
