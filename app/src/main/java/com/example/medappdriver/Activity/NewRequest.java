@@ -1,6 +1,7 @@
 package com.example.medappdriver.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import android.os.Bundle;
 
@@ -9,12 +10,15 @@ import com.example.medappdriver.Utils.ToolbarClass;
 
 import java.util.ArrayList;
 
-public class NewRequest extends ToolbarClass {
+public class NewRequest extends AppCompatActivity {
 
-    protected final void onCreate(Bundle savedInstanceState) {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.onCreate(R.layout.activity_new_request, "طلب جديد");
+        setContentView(R.layout.activity_new_request);
 
     }
+
 
 }

@@ -7,11 +7,12 @@ import android.os.Bundle;
 import com.example.medappdriver.R;
 import com.example.medappdriver.Utils.ToolbarClass;
 
-public class PinCode extends ToolbarClass {
+public class PinCode extends AppCompatActivity {
 
-
-    protected final void onCreate(Bundle savedInstanceState) {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.onCreate(R.layout.activity_pin_code, "تاكيد رقم الهاتف");
+        setContentView(R.layout.activity_pin_code);
+
     }
 }
