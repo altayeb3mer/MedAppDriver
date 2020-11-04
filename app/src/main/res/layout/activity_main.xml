@@ -31,61 +31,63 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context=".Activity.MapsActivity" />
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_marginTop="@dimen/margin_large_size"
-            android:layout_marginRight="@dimen/margin_large_size"
-            android:layout_marginLeft="@dimen/margin_large_size">
 
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardBottom"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            app:cardCornerRadius="0dp"
+            app:cardBackgroundColor="@color/bg_dark">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_marginLeft="@dimen/margin_small_size"
-                    android:layout_marginRight="@dimen/margin_small_size"
-                    android:id="@+id/profile_image"
-                    android:layout_width="85dp"
-                    android:layout_height="85dp"
-                    app:civ_border_width="0dp"
-                    app:civ_border_color="#FF000000"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/profile_template"
-                    android:layout_centerVertical="true"/>
-                <LinearLayout
-                    android:layout_toLeftOf="@+id/profile_image"
+                <androidx.appcompat.widget.SwitchCompat
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_marginTop="@dimen/margin_normal_size"
-                        android:textSize="@dimen/txt_normal_size"
-                        android:id="@+id/name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Driver name"
-                        />
-                    <TextView
-                        android:layout_marginTop="@dimen/margin_normal_size"
-                        android:textSize="@dimen/txt_small_size"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="+24925510574"
-                        />
-                </LinearLayout>
-                <androidx.appcompat.widget.SwitchCompat
-                    android:textSize="@dimen/txt_normal_size"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/margin_small_size"
-                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true"
                     android:text="متصل"
-
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/txt_normal_size"
+                    android:textStyle="bold"
                     />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:background="@drawable/main_rounded_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_above="@+id/cardBottom"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/margin_small_size">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_marginTop="@dimen/margin_small_size"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                app:civ_border_width="0dp"
+                app:civ_border_color="#FF000000"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_template"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:layout_marginTop="@dimen/margin_small_size"
+                android:textSize="@dimen/txt_normal_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Driver name"
+                android:textColor="@android:color/white"
+                />
+            <TextView
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/txt_small_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+24925510574"
+                />
+        </LinearLayout>
 
     </RelativeLayout>
 

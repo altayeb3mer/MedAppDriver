@@ -6,6 +6,9 @@
     <color name="colorPrimaryLight">#63a4ff</color>
     <color name="backgroundColor">#F5F5F5</color>
 
+    <color name="bg_dark">#54000000</color>
+
+
 
     <color name="bg_rec_new">#33808080</color>
     <color name="color80">#808080</color>
