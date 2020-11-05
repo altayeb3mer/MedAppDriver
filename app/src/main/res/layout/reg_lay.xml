@@ -35,15 +35,9 @@
                             android:textColor="@android:color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="تفاصيل"
+                            android:text="طلباتي"
                             android:textSize="35sp"
                             android:textStyle="bold"/>
-                        <TextView
-                            android:textColor="@android:color/white"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="الطلب"
-                            android:textSize="41sp"/>
                     </LinearLayout>
                 </RelativeLayout>
             </LinearLayout>
@@ -124,25 +118,39 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center">
 
-            <TextView
+            <LinearLayout
                 android:layout_marginTop="@dimen/margin_normal_size"
-                android:id="@+id/price1"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="@dimen/margin_normal_size"
-                android:layout_marginRight="@dimen/margin_normal_size"
-                android:background="@drawable/btn_bg_blue"
-                android:gravity="center"
-                android:minWidth="50dp"
-                android:text="12345668"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/txt_large_size"
-                android:textStyle="bold"
-                android:paddingLeft="@dimen/margin_small_size"
-                android:paddingRight="@dimen/margin_small_size"/>
+                android:orientation="horizontal"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_normal_size"
+                    android:text="طلب رقم"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/price1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/margin_small_size"
+                    android:layout_marginRight="@dimen/margin_small_size"
+                    android:background="@drawable/btn_bg_blue"
+                    android:gravity="center"
+                    android:minWidth="80dp"
+                    android:text="12345"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/txt_small_size"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler"

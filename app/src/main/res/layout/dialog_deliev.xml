@@ -13,13 +13,37 @@
             android:layout_height="wrap_content"
             android:textColor="@color/colorPrimary"
             android:textSize="@dimen/txt_large_size"
-            android:text="استلام من الصيدلية"/>
-        <TextView
-            android:layout_marginTop="@dimen/margin_small_size"
+            android:text="استلام من الصيدلية"
+            android:textStyle="bold"/>
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/txt_normal_size"
-            android:text="طلب رقم 12345"/>
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_normal_size"
+                android:text="طلب رقم"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/price1"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/margin_small_size"
+                android:layout_marginRight="@dimen/margin_small_size"
+                android:background="@drawable/btn_bg_blue"
+                android:gravity="center"
+                android:minWidth="80dp"
+                android:text="12345"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/txt_small_size"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
         <View
             android:layout_width="match_parent"
             android:layout_height="40dp"/>
@@ -30,6 +54,7 @@
             android:textSize="@dimen/txt_normal_size"
             android:text="ادخل كود التسليم"/>
         <EditText
+            android:textStyle="bold"
             android:paddingLeft="@dimen/margin_small_size"
             android:paddingRight="@dimen/margin_small_size"
             android:layout_marginTop="@dimen/margin_small_size"
