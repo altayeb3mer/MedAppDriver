@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.magsood.medappuser.Activity.SendRequest"
     android:layoutDirection="rtl">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -36,14 +35,14 @@
                             android:textColor="@android:color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="الطلب"
+                            android:text="طلب"
                             android:textSize="35sp"
                             android:textStyle="bold"/>
                         <TextView
                             android:textColor="@android:color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="الحالي"
+                            android:text="جديد"
                             android:textSize="41sp"/>
                     </LinearLayout>
                 </RelativeLayout>
@@ -152,7 +151,8 @@
                             android:text="موقع التسليم"
                             android:textColor="@color/colorPrimary"
                             android:gravity="center_vertical"
-                            android:textSize="@dimen/txt_normal_size"/>
+                            android:textSize="@dimen/txt_normal_size"
+                            android:textStyle="bold"/>
                         <TextView
                             android:background="@drawable/btn_bg_rounded_green"
                             android:paddingRight="@dimen/margin_small_size"

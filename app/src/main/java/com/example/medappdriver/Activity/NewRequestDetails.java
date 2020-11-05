@@ -12,17 +12,18 @@ import com.example.medappdriver.Utils.ToolbarClass;
 
 import java.util.ArrayList;
 
-public class NewRequestDetails extends ToolbarClass {
+public class NewRequestDetails extends AppCompatActivity {
 
     RecyclerView recyclerView;
     AdapterRequestDet adapterRequestDet;
     ArrayList<ModelRequest> arrayList;
 
-    protected final void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        super.onCreate(R.layout.activity_new_request_details, "تفاصيل الطلب");
-        init();
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_new_request_details);
+        init();
     }
 
     private void init() {

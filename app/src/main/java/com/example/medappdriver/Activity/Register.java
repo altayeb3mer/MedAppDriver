@@ -6,11 +6,15 @@ import android.os.Bundle;
 
 import com.example.medappdriver.R;
 import com.example.medappdriver.Utils.ToolbarClass;
+import com.google.android.gms.maps.SupportMapFragment;
 
-public class Register extends ToolbarClass {
+public class Register extends AppCompatActivity {
 
-    protected final void onCreate(Bundle savedInstanceState) {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.onCreate(R.layout.activity_register, "تسجيل جديد");
+        setContentView(R.layout.activity_register);
     }
+
+
 }
