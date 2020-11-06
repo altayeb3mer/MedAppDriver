@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.magsood.medappuser.Activity.SendRequest"
     android:layoutDirection="rtl">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -131,7 +130,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center">
             <LinearLayout
@@ -486,6 +485,9 @@
                         android:src="@drawable/ic_arrow_right48" />
                 </LinearLayout>
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"/>
 
             </LinearLayout>
         </LinearLayout>

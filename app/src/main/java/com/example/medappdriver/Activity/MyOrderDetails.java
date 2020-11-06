@@ -15,19 +15,18 @@ import com.example.medappdriver.Utils.ToolbarClass;
 
 import java.util.ArrayList;
 
-public class MyOrderDetails extends ToolbarClass {
+public class MyOrderDetails extends AppCompatActivity {
 
     RecyclerView recyclerView;
     AdapterMyOrderDet adapterRequestDet;
     ArrayList<ModelRequest> arrayList;
 
-    protected final void onCreate(Bundle savedInstanceState) {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.onCreate(R.layout.activity_my_order_details, "تفاصيل طلب");
-
+        setContentView(R.layout.activity_my_order_details);
         init();
     }
-
     private void init() {
         recyclerView = findViewById(R.id.recycler);
         arrayList = new ArrayList<>();

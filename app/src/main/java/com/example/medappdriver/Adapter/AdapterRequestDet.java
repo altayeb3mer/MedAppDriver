@@ -48,17 +48,7 @@ public class AdapterRequestDet extends RecyclerView.Adapter<AdapterRequestDet.Vi
 
 //
 
-        holder.textView_title.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (holder.container.getVisibility()==View.VISIBLE){
-                    holder.container.setVisibility(View.GONE);
-                }else {
-                    holder.container.setVisibility(View.VISIBLE);
-                }
 
-            }
-        });
         holder.layDeliev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,25 +77,16 @@ public class AdapterRequestDet extends RecyclerView.Adapter<AdapterRequestDet.Vi
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        LinearLayout container,layDeliev;
-        AppCompatButton buttonSubscription;
-        TextView textView_title,textView_type,textView_release_type,textView_release_time;
-        ImageView imageView;
+        LinearLayout container;
+        TextView textView_title,layDeliev;
 
 
         ViewHolder(View itemView) {
             super(itemView);
 
-
-//            imageView = itemView.findViewById(R.id.img);
             container = itemView.findViewById(R.id.container);
-//            buttonSubscription = itemView.findViewById(R.id.btn_sub);
-            textView_title = itemView.findViewById(R.id.txtPharmachy);
             layDeliev = itemView.findViewById(R.id.layDeliev);
 
-//            textView_type = itemView.findViewById(R.id.news_item_type);
-//            textView_release_type = itemView.findViewById(R.id.news_item_release_type);
-//            textView_release_time = itemView.findViewById(R.id.news_item_release_time);
 
             itemView.setOnClickListener(this);
         }

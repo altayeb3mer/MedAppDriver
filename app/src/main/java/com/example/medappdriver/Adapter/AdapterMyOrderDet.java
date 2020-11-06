@@ -34,7 +34,7 @@ public class AdapterMyOrderDet extends RecyclerView.Adapter<AdapterMyOrderDet.Vi
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = mInflater.inflate(R.layout.my_order_details_item, parent, false);
+        View view = mInflater.inflate(R.layout.new_request_item, parent, false);
         return new ViewHolder(view);
     }
 
@@ -45,17 +45,7 @@ public class AdapterMyOrderDet extends RecyclerView.Adapter<AdapterMyOrderDet.Vi
 
 //
 
-        holder.textView_title.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (holder.container.getVisibility()==View.VISIBLE){
-                    holder.container.setVisibility(View.GONE);
-                }else {
-                    holder.container.setVisibility(View.VISIBLE);
-                }
 
-            }
-        });
 //        holder.layDeliev.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -97,7 +87,6 @@ public class AdapterMyOrderDet extends RecyclerView.Adapter<AdapterMyOrderDet.Vi
 //            imageView = itemView.findViewById(R.id.img);
             container = itemView.findViewById(R.id.container);
 //            buttonSubscription = itemView.findViewById(R.id.btn_sub);
-            textView_title = itemView.findViewById(R.id.txtPharmachy);
 //            layDeliev = itemView.findViewById(R.id.layDeliev);
 
 //            textView_type = itemView.findViewById(R.id.news_item_type);

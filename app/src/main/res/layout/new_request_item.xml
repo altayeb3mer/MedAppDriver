@@ -358,10 +358,12 @@
                             app:layout_constraintRight_toRightOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            >
 
 
                             <TextView
+                                android:id="@+id/layDeliev"
                                 android:layout_width="wrap_content"
                                 android:layout_height="30dp"
                                 android:layout_alignParentRight="true"
