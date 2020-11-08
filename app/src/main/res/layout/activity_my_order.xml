@@ -1,34 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.NewRequestDetails"
     android:layoutDirection="rtl">
-    <include layout="@layout/public_toolbar"
-        android:id="@+id/toolbar"/>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@android:color/transparent">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:background="@drawable/top_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/r2">
+                    <LinearLayout
+                        android:layout_marginRight="@dimen/margin_large_size"
+                        android:layout_marginLeft="@dimen/margin_large_size"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:textColor="@android:color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="طلباتي"
+                            android:textSize="41sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:layout_collapseMode="pin"
+                >
+                <RelativeLayout
+                    android:background="@color/colorPrimary"
+                    android:id="@+id/r1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:background="@drawable/shape_back_circle"
+                        android:layout_marginLeft="@dimen/margin_small_size"
+                        android:layout_marginRight="@dimen/margin_small_size"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="37dp"
+                        android:layout_height="37dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        >
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_arrow_back"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginLeft="@dimen/margin_small_size"
+                        android:layout_marginRight="@dimen/margin_small_size"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="37dp"
+                        android:layout_height="37dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        >
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/white"
+                            android:layout_marginRight="@dimen/margin_small_size"
+                            android:layout_marginLeft="@dimen/margin_small_size"/>
+                        <View
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/white"
+                            android:layout_marginRight="@dimen/margin_small_size"
+                            android:layout_marginLeft="@dimen/margin_small_size"/>
+                        <View
+                            android:layout_gravity="right"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="15dp"
+                            android:layout_height="1dp"
+                            android:background="@android:color/white"
+                            android:layout_marginRight="@dimen/margin_small_size"
+                            android:layout_marginLeft="@dimen/margin_small_size"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar">
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
+
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 app:spanCount="1"
-                tools:itemCount="50"
+                tools:itemCount="5"
                 android:visibility="visible"
                 tools:listitem="@layout/my_order_item"
                 />
-        </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
 
+        </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
 
-</RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
